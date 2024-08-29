@@ -34,6 +34,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { logoutAccount } from '@/lib/actions/user.actions'
 import { useRouter } from 'next/navigation'
+import { handleAddNoteUtils } from '@/lib/utils'
 
 
 
@@ -49,6 +50,12 @@ const email = userData.email;
      if(loggedOut) router.push('/sign-in')
 
    }
+
+   const handleAddNote = () => {
+
+    const userid = userData.$id;
+    handleAddNoteUtils(userid)
+  }
     
     return (
         <div>
@@ -107,7 +114,7 @@ const email = userData.email;
                         </DropdownMenuSub>
                         <DropdownMenuItem>
                             <Plus className="mr-2 h-4 w-4" />
-                            <span>New Note</span>
+                            <span onClick={handleAddNote} >New Note</span>
                             <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>

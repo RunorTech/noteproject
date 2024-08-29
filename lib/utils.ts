@@ -1,6 +1,7 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { z } from "zod";
+import { getUserDocumentId } from "./actions/user.actions";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -47,3 +48,9 @@ export const  bodyParser = (value : any) => {
       return value;
   }
 };
+
+export const handleAddNoteUtils = async (userid : any) => {
+  const NewAddedNote = await getUserDocumentId(userid);
+  window.location.href = window.location.href;
+ }
+ 

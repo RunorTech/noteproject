@@ -67,7 +67,7 @@ const AuthForm = ({ type }: { type: string }) => {
    
     }
     } catch (error) {
-      console.log( typeof error);
+      console.log( error);
       
     } finally {
       setIsLoading(false);

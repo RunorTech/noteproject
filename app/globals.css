@@ -168,6 +168,17 @@ textarea:focus{
 z-index: 10000;
 }
 
+@media screen and (max-width: 600px) {
+	#controls{
+		height: 60px;
+		overflow-y: hidden;
+		background-color: transparent;
+	}
+	.card{
+		width: 300px;
+	}
+}
+
 
 #add-btn{
   background-color: rgba(107,107,107,1);

@@ -29,6 +29,10 @@ const NoteCard = ({ notes }: any) => {
     }, [])
     // const target = e.target as HTMLDivtElement;
 
+    // const mobileClick = () => {
+    //      document.addEventListener("click", mouseDown);
+    // }
+
 	const mouseDown  =  (e : MouseEvent)   => {
         // takes the current position of the card
         mouseSartPosition.x = e.clientX;

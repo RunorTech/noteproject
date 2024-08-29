@@ -84,7 +84,6 @@ export const signUp = async ({ email, password }: SignUpParams) => {
     return parseStringify(newUser);
   } catch (error) {
     console.log(error)
-    console.debug()
   }
 }
 

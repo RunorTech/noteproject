@@ -3,19 +3,13 @@ import Plus from './ui/Plus'
 import Colors from '@/lib/colors.json'
 import { createNote, getUserDocumentId } from '@/lib/actions/user.actions'
 import { useRouter } from 'next/navigation'
+import { handleAddNoteUtils } from '@/lib/utils'
 
 const AddButton = ( {userid} : any) => {
   
-  const router = useRouter();
-  
-
-const handleAddNote = async () => {
- 
-
- const NewAddedNote = await getUserDocumentId(userid);
- window.location.href = window.location.href;
+const handleAddNote = () => {
+  handleAddNoteUtils(userid)
 }
-
 
   return (
     <div id="add-btn" onClick={handleAddNote} >
